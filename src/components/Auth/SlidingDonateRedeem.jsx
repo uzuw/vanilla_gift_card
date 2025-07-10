@@ -1,0 +1,79 @@
+import React, { useState } from "react";
+
+const SlidingDonateRedeem = () => {
+  const [showRedeem, setShowRedeem] = useState(false);
+
+  const toggleMode = () => setShowRedeem(!showRedeem);
+
+  const buttonStyle =
+    "w-full text-white bg-gray-900 hover:bg-black focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-105 hover:shadow-md";
+
+  return (
+    <div className="relative w-full min-h-screen bg-white overflow-hidden flex items-center justify-center">
+      {/* Animated Circle Background */}
+      <div
+        className={`absolute rounded-full bg-blue-400 w-[1500px] h-[1500px] lg:w-[2000px] lg:h-[2000px] z-[1]
+          transition-all duration-[1800ms] ease-in-out
+          ${showRedeem ? "translate-x-full right-[52%]" : "right-[48%]"}
+          top-[50%] -translate-y-1/2 -translate-x-1/2`}
+      ></div>
+
+      {/* Main Content */}
+      <div className="relative z-[5] w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 px-6 py-20">
+        {/* Donate Panel */}
+        <div
+          className={`flex flex-col items-center justify-center px-6 text-center transition-all duration-700 ease-in-out
+            ${showRedeem ? "opacity-0 pointer-events-none translate-x-[-50px]" : "opacity-100"}`}
+        >
+          <h2 className="text-3xl font-extrabold text-blue-500 mb-4">Support RedeemHub ❤️</h2>
+          <p className="text-gray-600 mb-6 max-w-sm">
+            If you love what we're building, your support helps us grow and stay online.
+          </p>
+          <button
+            className={buttonStyle}
+            onClick={() => alert("Redirecting to donation portal...")}
+          >
+            Donate Now
+          </button>
+          <button
+            onClick={toggleMode}
+            className="mt-6 text-sm text-gray-500"
+          >
+            Have a code? <span className="text-blue-400 hover:scale-105 hover:text-blue-600 transition duration-200">Redeem it</span>
+          </button>
+        </div>
+
+        {/* Redeem Panel */}
+        <div
+          className={`flex flex-col items-center justify-center px-6 text-center transition-all duration-700 ease-in-out
+            ${showRedeem ? "opacity-100" : "opacity-0 pointer-events-none translate-x-[50px]"}`}
+        >
+          <h2 className="text-3xl font-extrabold text-gray-100 mb-4">Redeem Your Gift Code 🎁</h2>
+          <p className="text-gray-500 mb-6 max-w-sm">
+            Enter your vanilla gift card code below and unlock your reward.
+          </p>
+          <input
+            type="text"
+            placeholder="Enter gift card code"
+            className="w-full border border-gray-300 rounded-lg px-5 py-3 text-lg text-gray-900 placeholder-gray-400
+              focus:outline-none focus:ring-4 focus:ring-gray-700 transition mb-4"
+          />
+          <button
+            className={buttonStyle}
+            onClick={() => alert("Redeem logic here")}
+          >
+            Redeem
+          </button>
+          <button
+            onClick={toggleMode}
+            className="mt-6 text-sm text-gray-200"
+          >
+            Go back to <span className="text-red-100 hover:scale-110">Donate</span> 
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SlidingDonateRedeem;

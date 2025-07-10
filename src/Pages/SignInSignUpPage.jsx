@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
-import SlidingLoginSignup from "../components/Auth/SlidingLoginSignup";
+import SlidingLoginSignup from "../components/Auth/SlidingDonateRedeem";
 
 const SignInSignUpPage = () => {
   return (
