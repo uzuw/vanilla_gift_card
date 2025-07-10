@@ -10,7 +10,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/discover" element={<DiscoverPage />} />
-      <Route path="/auth" element={<SlidingAuthPage />} />
+      <Route path="/auth" element={<h1>Login section 👤</h1>} />
     </Routes>
   );
 }

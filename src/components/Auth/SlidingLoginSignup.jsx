@@ -56,9 +56,9 @@ const SlidingLoginSignup = ({ initialMode = "signin" }) => {
           <SignUpForm buttonClasses={buttonClasses} buttonForGFT={buttonForGFT} />
           <button
             onClick={toggleSignUpMode}
-            className="mt-6 text-sm text-blue-600 hover:underline"
+            className="mt-6 text-sm text-gray-200 hover:underline"
           >
-            Already have an account? Sign in
+            Already have an account?  <span className="text-white">Sign in</span>
           </button>
         </div>
       </div>

@@ -200,9 +200,7 @@ const SignUpForm = ({ buttonClasses, buttonForGFT }) => {
           </button>
         </div>
 
-        <p className="text-sm text-center text-gray-600 mt-4 border-t border-gray-100 pt-4">
-          Already have an account? Sign in
-        </p>
+
       </div>
     </div>
   );

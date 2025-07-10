@@ -6,7 +6,6 @@ import NavBar from "../components/NavBar/NavBar";
 const SlidingAuthPage = () => {
   return (
     <>
-      <NavBar />
       <SlidingLoginSignup />
     </>
   );

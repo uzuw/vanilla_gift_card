@@ -2,8 +2,7 @@ import React from "react";
 import { NavbarMenu } from "../../mockData/data";
 import { CiSearch } from "react-icons/ci";
 import { MdMenu } from "react-icons/md";
-
-
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -29,9 +28,13 @@ const Navbar = () => {
         <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
           <CiSearch />
         </button>
-        <button className="hove:bg-primary font-semibold hover:text-primary rounded-md bordefr-2 border-primary px-6 py-2 duration-200 hidden md:block">
-          login
-        </button>
+        <Link
+  to="/auth"
+  className="font-semibold text-primary border-2 border-primary px-6 py-2 rounded-md hidden md:block hover:bg-primary hover:text-white transition duration-200"
+>
+  Login
+</Link>
+
       </div>
       <div className="md:hidden" onClick={() => setOpen(!open)}>
         <MdMenu className="text-4xl"/>

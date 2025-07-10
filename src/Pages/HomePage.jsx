@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
+import SlidingAuthPage from "./SlidingAuthPage";
 
 const HomePage = () => {
   return (
@@ -47,6 +48,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <SlidingAuthPage></SlidingAuthPage>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center py-6">
